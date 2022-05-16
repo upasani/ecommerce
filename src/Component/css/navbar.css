@@ -1,0 +1,12 @@
+#navbar{
+    display: flex;
+    border: 1px solid black;
+    width: 95%;
+    margin: auto;
+    justify-content: space-between;
+    padding: 10px;
+}
+div>#shop{
+    border: 4px solid black;
+
+}

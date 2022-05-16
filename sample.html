@@ -1,0 +1,13 @@
+<button onclick="getOrder()"> Get Request</button>
+<script>
+    function getOrder() {
+        fetch(`http://localhost:5000/razor`,{
+            method:"POST",
+            headers:{
+                "Content-Type":"Application/json"
+            }
+        }).then((res)=>res.json())
+        .then(res=>console.log("The res is",res))
+        .catch(err=>console.log("The error is",err));
+    }
+</script>
