@@ -19,7 +19,7 @@ export const Cart = () => {
 
     const dispatch = useDispatch();
     const getData = () => {
-        fetch(` http://localhost:5000/cart`)
+        fetch(`https://powerful-thicket-30637.herokuapp.com/cart`)
             .then(res => res.json())
             .then(res => setCart(res))
             .catch(err => console.log(err))
@@ -44,7 +44,7 @@ export const Cart = () => {
         let id = e.target.id;
         // console.log(e.target.id);
         // console.log("The id is",id);
-        fetch(`http://localhost:5000/cart/${id}`, {
+        fetch(`https://powerful-thicket-30637.herokuapp.com/cart/${id}`, {
             method: "DELETE",
         }).then(res=>{
             alert("Delete Item Succesfully");

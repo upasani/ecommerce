@@ -59,7 +59,7 @@ export const cart_update=(item,sum)=>(dispatch)=>{
 
 export const cart_add=(payload)=>(dispatch)=>{
     dispatch(cart_loading());
-    fetch(`http://localhost:5000/cart`,{
+    fetch(`https://powerful-thicket-30637.herokuapp.com/cart`,{
         method:"POST",
         body:JSON.stringify(payload),
         headers:{
