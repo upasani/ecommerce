@@ -7,7 +7,7 @@ export const Category = () => {
 
 
     const getData = () => {
-        fetch(`http://localhost:5000/products?category=${cat}&order=${sort}&page=1`)
+        fetch(`https://powerful-thicket-30637.herokuapp.com/products?category=${cat}&order=${sort}&page=1`)
             .then(res => res.json())
             .then(res => setData(res))
             .catch(err => console.log(err))
