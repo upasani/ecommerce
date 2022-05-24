@@ -4,16 +4,19 @@ import { IconButton } from '@mui/material';
 import Badge from "@material-ui/core/Badge";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { useNavigate } from "react-router-dom";
+import HomeIcon from "@material-ui/icons/Home";
 
 
 export const Navbar = () => {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     return (
         <>
 
             <div id="navbar">
                 <div>
-                    <Link to='/'>Home</Link>
+                    <Badge color='secondary' style={{ cursor: "pointer" }}>
+                        <HomeIcon onClick={() => true ? navigate('/') : "Not true"} />
+                    </Badge>
                 </div>
                 <div>
                     <p>input box and the search icon</p>
@@ -21,12 +24,10 @@ export const Navbar = () => {
                 <div>
                     <Link to='/login'>Login</Link>
                 </div>
+               
                 <div>
-                    <Link to='/register'>Register</Link>
-                </div>
-                <div>
-                    <Badge color='secondary' style={{cursor:"pointer"}}>
-                        <ShoppingCartIcon onClick={()=>true?navigate('/cart'):"Not true"}/>
+                    <Badge color='secondary' style={{ cursor: "pointer" }}>
+                        <ShoppingCartIcon onClick={() => true ? navigate('/cart') : "Not true"} />
                     </Badge>
                     {/* <Link to='/cart'>Cart</Link> */}
                 </div>
